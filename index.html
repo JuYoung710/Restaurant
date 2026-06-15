@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viliage 맛집</title>
+    <style>
+        * {
+            box-sizing : border-box;
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+            font-family: 'Okticon';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_okticon-Lt.woff2') format('woff2');
+            font-weight: 300;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Okticon';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_okticon-Rg.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Okticon';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_okticon-Bd.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        body { 
+            font-family: 'Okticon';
+        }
+
+        .gmt {
+            width: 1400px;
+            margin: 20px auto;
+            display: grid;
+            border: 2px solid black; /* 전체를 감싸는 큰 테두리 */
+
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 80px 500px 50px;
+            gap: 14px;
+
+            grid-template-areas:
+                "header header"
+                "left main"
+                "footer footer";
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .left,
+        main,
+        footer  {
+            border: 2px solid #000;
+            padding: 16px;
+        }
+
+        header { grid-area: header; }
+        .left { grid-area: left; }
+        main { grid-area: main; }
+        footer { grid-area: footer; }
+
+        h1 {
+            background-color: aliceblue;
+            text-align: center;
+            padding:20px;
+            margin: 20px;
+        }
+
+        .left {
+            border: 1px solid #000;
+            background-color: skyblue;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        main {
+            border: 1px solid #000;
+            background-color: skyblue;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        footer {
+            padding:14px;
+            margin: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 500px;
+            margin-left: 20px;
+        }
+
+        .image-box {
+            display: flex;
+            gap: 18px;
+            margin-top:80px;
+        }
+
+        .image-box img {
+            width: 33%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .image-box img:hover {
+            transform: scale(1.2);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="gmt">
+        <header>
+            <h1>동네 맛집 소개</h1>
+            <p> 위 글씨를 눌러주세요 </p>
+        </header>
+        
+        <aside class="left">
+            <h2><a href="2_Incheon.html">Incheon</a></h2>
+
+            <div class="image-box">
+                <img src="월미.png" alt="인천 맛집1">
+                <img src="화화쿵주마라탕.png" alt="인천 맛집2">
+                <img src="진시황.png" alt="인천 맛집3">
+            </div>
+        </aside>
+        
+        <main >
+           <h2><a href="3_Seoul.html">Seoul</a></h2>
+
+           <div class="image-box">
+                <img src="닭한마리.png" alt="서울 맛집1">
+                <img src="타이인플레이트.png" alt="서울 맛집2">
+                <img src="곱창.png" alt="서울 맛집3">
+           </div>
+        </main>
+        
+        <footer>
+            <h5>@JJU.copyright</h5>
+        </footer>
+    </div>
+</body>
+</html>
+
